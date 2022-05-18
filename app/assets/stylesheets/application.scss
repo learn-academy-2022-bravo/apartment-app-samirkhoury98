@@ -14,3 +14,17 @@
  *= require_self
  */
 @import 'bootstrap';
+
+.footer-bbs {
+    border: 1px solid black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.header-text {
+    position: fixed;
+    right: 10;
+
+}
