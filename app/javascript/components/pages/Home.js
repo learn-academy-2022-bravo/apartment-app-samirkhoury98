@@ -5,7 +5,7 @@ export default class Home extends Component {
     return (
 
       <section className='hero'>
-        <img src='https://androthemes.com/themes/html/nycondos/assets/img/banner/04.jpg' alt='' />
+        <img src='https://androthemes.com/themes/html/nycondos/assets/img/banner/04.jpg' alt=' Picture of apartment ' />
         <div className='hero-content'>
           <h1 className='heading-text'>WELCOME TO BIGBODYAPARTMENTS!</h1>
 

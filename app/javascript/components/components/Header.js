@@ -14,28 +14,8 @@ const Header = (props) => {
     sign_in_route,
     sign_out_route
   } = props;
-  console.log("logged_in:", logged_in)
-  console.log("current_user:", current_user)
   return (
     <>
-
-      {/* <Nav>
-          {logged_in &&
-            <NavItem className='navBar' >
-              <a href={sign_out_route} className="nav-link">Sign Out</a>
-            </NavItem>
-          }
-          {!logged_in &&
-            <NavItem className='navBar'>
-              <a href={sign_in_route} className="nav-link">Sign In</a>
-            </NavItem>
-          }
-          {!logged_in &&
-            <NavItem className='navBar'>
-              <a href={new_user_route} className="nav-link">Sign Up</a>
-            </NavItem>
-          }
-        </Nav> */}
 
       <div>
         <Navbar
@@ -43,9 +23,9 @@ const Header = (props) => {
           expand="md"
           dark
         >
-          <NavbarBrand href="/">
+          <NavLink href="/">
             BIGBODYAPARTMENTS
-          </NavbarBrand>
+          </NavLink>
           <NavbarToggler onClick={toggle} />
           <Collapse navbar isOpen={isOpen}>
             <Nav
@@ -58,7 +38,7 @@ const Header = (props) => {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/ApartmentNew">
+                <NavLink href="/ApartmentIndex">
                   SAVED APARTMENTS
                 </NavLink>
               </NavItem>
@@ -73,10 +53,10 @@ const Header = (props) => {
                   MY APARTMENTS
                 </DropdownToggle>
                 <DropdownMenu end>
-                  <NavLink href="/ApartmentIndex/">
+                  <NavLink href="/ApartmentNew/">
                     ADD AN APARTMENT
                   </NavLink>
-                  <NavLink href="/ApartmentIndex/">
+                  <NavLink href="/ApartmentEdit/">
                     EDIT MY APARTMENTS
                   </NavLink>
                   <NavLink href="/ApartmentIndex/">
@@ -85,12 +65,21 @@ const Header = (props) => {
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>
-            <NavLink href="/ApartmentIndex/">
-              SIGN IN
-            </NavLink>
-            <NavLink href="/ApartmentIndex/">
-              SIGN UP
-            </NavLink>
+            {logged_in &&
+              <NavItem className='nav-link' >
+                <a href={sign_out_route} >Sign Out</a>
+              </NavItem>
+            }
+            {!logged_in &&
+              <NavItem className='nav-link' >
+                <a href={sign_in_route} >Sign In</a>
+              </NavItem>
+            }
+            {!logged_in &&
+              <NavItem className="nav-link" >
+                <a href={new_user_route} >Sign Up</a>
+              </NavItem>
+            }
           </Collapse>
         </Navbar>
       </div>
