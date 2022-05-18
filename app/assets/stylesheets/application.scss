@@ -14,3 +14,56 @@
  *= require_self
  */
 @import 'bootstrap';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.hero {
+    height: calc(100vh - 102px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.hero-content {
+    z-index: 1;
+    position: relative;
+    background-color: rgba(250, 250, 250, 0.5);
+    max-width: 80%;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.footer-bbs {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.navbar-dark .navbar-nav .show .dropdown-toggle.nav-link {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.navbar-dark .navbar-nav .show>.nav-link {
+    color: blue;
+}
