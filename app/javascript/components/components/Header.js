@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Nav, NavItem, Navbar, NavbarToggler, NavLink, NavbarBrand, NavbarText, Collapse, DropdownToggle, UncontrolledDropdown, DropdownItem, DropdownMenu } from 'reactstrap'
+import { Nav, NavItem, Navbar, NavbarToggler, Collapse, DropdownToggle, UncontrolledDropdown, DropdownMenu } from 'reactstrap'
+import { NavLink } from 'react-router-dom';
 
 
 const Header = (props) => {
@@ -23,7 +24,7 @@ const Header = (props) => {
           expand="md"
           dark
         >
-          <NavLink href="/">
+          <NavLink to="/">
             BIGBODYAPARTMENTS
           </NavLink>
           <NavbarToggler onClick={toggle} />
@@ -33,12 +34,12 @@ const Header = (props) => {
               navbar
             >
               <NavItem>
-                <NavLink href="/ApartmentIndex/">
+                <NavLink to="/apartmentindex" className='nav-link'>
                   VIEW APARTMENTS
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/ApartmentIndex">
+                <NavLink to="/apartmentindex" className='nav-link'>
                   SAVED APARTMENTS
                 </NavLink>
               </NavItem>
@@ -53,13 +54,13 @@ const Header = (props) => {
                   MY APARTMENTS
                 </DropdownToggle>
                 <DropdownMenu end>
-                  <NavLink href="/ApartmentNew/">
+                  <NavLink to="/apartmentnew" className='nav-link'>
                     ADD AN APARTMENT
                   </NavLink>
-                  <NavLink href="/ApartmentEdit/">
+                  <NavLink to="/apartmentedit/" className='nav-link'>
                     EDIT MY APARTMENTS
                   </NavLink>
-                  <NavLink href="/ApartmentIndex/">
+                  <NavLink to="/apartmentindex" className='nav-link'>
                     VIEW MY APARTMENTS
                   </NavLink >
                 </DropdownMenu>
