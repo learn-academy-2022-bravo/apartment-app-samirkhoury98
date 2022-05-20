@@ -20,6 +20,17 @@
     padding: 0;
 }
 
+.whole-form {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
 body {
     background-color: black;
 }
@@ -58,6 +69,7 @@ body {
     background-color: black;
     color: white;
     padding: 10px;
+    margin-top: auto;
 }
 
 .navbar-dark .navbar-nav .show .dropdown-toggle.nav-link {
@@ -66,4 +78,43 @@ body {
 
 .navbar-dark .navbar-nav .show>.nav-link {
     color: blue;
+}
+
+.indextitle {
+    color: white;
+}
+
+.card-img {
+    height: 250px;
+    position: relative;
+    width: 100%;
+
+}
+
+.card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+.showbody {
+    background-color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.showimg {
+    width: 60%;
+}
+
+.showtext {
+    padding: 50px;
+
+}
+
+.showtext p {
+    display: block;
+    border-bottom: 1px solid black;
 }

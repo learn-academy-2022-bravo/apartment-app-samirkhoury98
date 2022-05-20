@@ -31,22 +31,29 @@ class App extends Component {
 
   render() {
     return (
-
       <Router>
         <Header {...this.props} />
+
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/apartmentindex"
             render={() => <ApartmentIndex apartments={this.state.apartments} />}
           />
-          <Route path="/apartmentshow" component={ApartmentShow} />
+          <Route
+            path="/apartmentshow/:id"
+            render={(props) => {
+              let id = +props.match.params.id
+              let apartment = this.state.apartments.find(apartmentObject => apartmentObject.id === id)
+              return <ApartmentShow apartment={apartment} deleteApartment={this.deleteApartment} />
+            }}
+          />
           <Route path="/apartmentnew" component={ApartmentNew} />
           <Route path="/apartmentedit" component={ApartmentEdit} />
           <Route component={NotFound} />
         </Switch>
+
         <Footer{...this.props} />
       </Router>
-
 
 
     )
