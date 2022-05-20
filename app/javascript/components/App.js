@@ -31,9 +31,9 @@ class App extends Component {
 
   render() {
     return (
-
       <Router>
         <Header {...this.props} />
+
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/apartmentindex"
@@ -51,9 +51,9 @@ class App extends Component {
           <Route path="/apartmentedit" component={ApartmentEdit} />
           <Route component={NotFound} />
         </Switch>
+
         <Footer{...this.props} />
       </Router>
-
 
 
     )

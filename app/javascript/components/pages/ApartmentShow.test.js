@@ -9,6 +9,7 @@ import Adapter from 'enzyme-adapter-react-16'
 
 // Imports in the component we are going to be testing.
 import ApartmentShow from './ApartmentShow'
+import { Button } from 'reactstrap'
 
 //Allows us to utilize the adapter we import in earlier, allowing us to call and render a component.
 Enzyme.configure({ adapter: new Adapter() })
@@ -17,6 +18,6 @@ describe("When ApartmentShow renders", () => {
   it("displays a button", () => {
     const apartmentShow = shallow(<ApartmentShow />)
     const apartmentShowButton = apartmentShow.find("Button")
-    expect(apartmentShowButton.find(Button)).to.have.lengthOf(1)
+    expect(apartmentShowButton.length).toEqual(1)
   })
 })
